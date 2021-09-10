@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 import "../App.css";
+import { Checkbox } from "semantic-ui-react";
 export default function Header() {
   const { theme, setTheme } = useContext(ThemeContext);
 //   console.log("Header Template: ", theme);
@@ -12,7 +13,9 @@ export default function Header() {
   return (
     <div>
       Header Template {theme} <br />
-      <button onClick={changeTheme}>Change Theme</button>
+      <div class="ui fitted toggle checkbox">
+          <Checkbox onClick={changeTheme} />
+      </div>
     </div>
   );
 }

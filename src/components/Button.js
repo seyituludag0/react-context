@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import { Checkbox } from "semantic-ui-react";
 
 export default function Button() {
   const { theme, setTheme } = useContext(ThemeContext);
-//   console.log(theme);
+  //   console.log(theme);
 
   function changeTheme() {
     setTheme(theme === "light" ? "dark" : "light");
@@ -14,7 +15,9 @@ export default function Button() {
     <div>
       Active Theme: {theme} <br />
       <br />
-      <button onClick={changeTheme}>Change Theme</button>
+      <div class="ui fitted toggle checkbox">
+          <Checkbox onClick={changeTheme} />
+      </div>
     </div>
   );
 }
