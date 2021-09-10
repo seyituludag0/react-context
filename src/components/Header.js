@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <div>
       Header Template {theme} <br />
-      <div class="ui fitted toggle checkbox">
+      <div className="ui fitted toggle checkbox">
           <Checkbox onClick={changeTheme} />
       </div>
     </div>
