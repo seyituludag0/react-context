@@ -1,0 +1,9 @@
+.app{
+  height: 100vh;
+}
+
+.dark {
+  background-color: #282c34;
+  color: #fff;
+}
+
